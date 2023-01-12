@@ -1,10 +1,150 @@
-.tittle {
-    color: #7cfc00;
-    width: 300px;
-    height: 50px;
-    background-color: teal;
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+:root {
+    --primary-color : rgb(0, 0, 0, 0.25);
+    --secundary-color : rgb(8, 5, 2, 0.80);
+    --button-color:rgb(0, 0, 2, 0.75);
+    --font-family: 'Fredoka One', cursive;
 }
-#selecionar-mascota {
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: var(--font-family);
+    margin-top: 20px;
+    background-image: url(https://4.bp.blogspot.com/-7mcdGoDKAew/XD_A96jNVGI/AAAAAAAASxg/Dn6s6tqO_lI9Aw7f1B_izffzOEj8GrmoQCLcBGAs/s1600/Paisaje%2BPixel%2BArt.png);
+}
+#seleccionar-mascota {
     display:  flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titulo {
+    color: rgb(253, 236, 3);
+    font-size: 48px;
+    text-shadow: 8px 1px 0 #0f00f3;
+}
+
+.subtitulo{
+    color: white;
+    font-size: 24px;
+    margin: 15px 0 15px 0;
+    letter-spacing: 2px;
+}
+
+.tarjetas{
+    display:  flex;
+    gap: 10px;
+}
+
+.tarjeta-de-mokepon{
+    width: 200px;
+    height: 100px;
+    background:var(--primary-color);
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.tarjeta-de-mokepon img{
+    width: 80px;
+}
+
+input{
+    display: none;
+}
+
+input:checked + label{
+    background-color: var(--secundary-color);
+}
+.button-seleccionar{
+    width: 180px;
+    height: 40px;
+    background: var(--button-color);
+    padding: 5px;
+    margin-top: 30px;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+/* segunda pantalla */
+
+#seleccionar-ataque{
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-ataque{
+    width: 140px;
+    background-color: var(--button-color);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+.botones-ataques{
+    display: flex;
+    gap: 15px;
+}
+
+.boton-ataque:checked{
+    border: 2px solid white ;
+}
+
+#mensajes{
+    width: 280px;
+    background-color: var(--button-color);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 1.4rem;
+}
+#boton-reiniciar{
+    border: none;
+    color: #11468f;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.6rem;
+    margin-top: 15px;
+    background-color: var(--button-color);
+}
+
+.ataques{
+    display: grid;
+    grid-template-columns: 120px 120px;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 360px){
+    .tarjetas{
+        flex-direction: column;
+    }
+    .botones-ataques{
+        flex-direction: column;
+    }
+
 }

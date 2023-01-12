@@ -6,7 +6,7 @@ let vidasEnemigo = 3
 
 
 function iniciarJuego() {
-    let sectionSeleccionarAtaque = document.getElementById('selecionar-ataque')
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
     sectionSeleccionarAtaque.style.display = 'none'
 
     let botonMascotaJugador = document.getElementById('boton-mascota')
@@ -26,11 +26,11 @@ function iniciarJuego() {
 
 function seleccionarMascotaJugador() {
 
-    let sectionSeleccionarMascota = document.getElementById('selecionar-mascota')
+    let sectionSeleccionarMascota = document.getElementById('seleccionar-mascota')
     sectionSeleccionarMascota.style.display = 'none'
 
-    let sectionSeleccionarAtaque = document.getElementById('selecionar-ataque')
-    sectionSeleccionarAtaque.style.display = 'block'
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
+    sectionSeleccionarAtaque.style.display = 'flex'
 
     let inputHipodoge = document.getElementById('hipodoge')
     let inputCapipepo = document.getElementById('capipepo')
@@ -124,22 +124,26 @@ function revisarVidas() {
     }
 }
 
-function crearMensaje(resultadoCombate){
-    let sectionMensajes = document.getElementById('mensajes')
+function crearMensaje(resultado){
+    let sectionMensajes = document.getElementById('resultado')
+    let ataquesDelJugador = document.getElementById('ataques-del-jugador')
+    let ataquesDelEnemigo = document.getElementById('ataques-del-enemigo')
 
-    let parrafo = document.createElement('p')
-    parrafo.innerHTML = 'Tu mascota atacó con ' + ataqueJugador + ', la mascota del enemigo atacó con ' + ataqueEnemigo + ' - ' + resultadoCombate
+    let nuevoAtaqueDelJugador = document.createElement('p')
+    let nuevoAtaqueDelEnemigo = document.createElement('p')
 
-    sectionMensajes.appendChild(parrafo)
+    sectionMensajes.innerHTML = resultado
+    nuevoAtaqueDelJugador.innerHTML = ataqueJugador
+    nuevoAtaqueDelEnemigo.innerHTML = ataqueEnemigo
+
+    ataquesDelJugador.appendChild(nuevoAtaqueDelJugador)
+    ataquesDelEnemigo.appendChild(nuevoAtaqueDelEnemigo)
 }
 
 function crearMensajeFinal(resultadoFinal){
-    let sectionMensajes = document.getElementById('mensajes')
+    let sectionMensajes = document.getElementById('resultado')
 
-    let parrafo = document.createElement('p')
-    parrafo.innerHTML = resultadoFinal
-
-    sectionMensajes.appendChild(parrafo)
+    sectionMensajes.innerHTML = resultadoFinal
 
     let botonFuego = document.getElementById('boton-fuego')
     botonFuego.disabled = true
