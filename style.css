@@ -14,7 +14,14 @@ body{
     width: 100%;
     height: 100vh;
     font-family: var(--font-family);
-    margin-top: 20px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 1600px;
+    height: 900px;
     background-image: url(https://4.bp.blogspot.com/-7mcdGoDKAew/XD_A96jNVGI/AAAAAAAASxg/Dn6s6tqO_lI9Aw7f1B_izffzOEj8GrmoQCLcBGAs/s1600/Paisaje%2BPixel%2BArt.png);
 }
 #seleccionar-mascota {
@@ -27,6 +34,7 @@ body{
     color: rgb(253, 236, 3);
     font-size: 48px;
     text-shadow: 8px 1px 0 #0f00f3;
+    margin-top: 20px;
 }
 
 .subtitulo{
@@ -127,7 +135,7 @@ input:checked + label{
     font-family: 'Fredoka One', cursive;
     font-size: 1.6rem;
     margin-top: 15px;
-    background-color: var(--button-color);
+    background-color: transparent;
 }
 
 .ataques{
@@ -139,7 +147,10 @@ input:checked + label{
     letter-spacing: 2px;
 }
 
-@media (max-width: 360px){
+@media (max-width: 600px){
+    body{
+        align-items: flex-start;
+    }
     .tarjetas{
         flex-direction: column;
     }
