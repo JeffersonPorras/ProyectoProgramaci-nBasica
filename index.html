@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./js/mokepon.js"></script>
 </head>
 <body>
     <section class="container">
@@ -15,36 +14,8 @@
 
             <h2 class="subtitulo">Elige a tu mascota :</h2>
 
-            <div class="tarjetas">
-
-                <input type="radio" name="mascota" id="hipodoge">
-                <label class="tarjeta-de-mokepon" for="hipodoge">
-                    <p>Hipodoge</p>
-                    <img src="./assets/mokepons_mokepon_hipodoge_attack.png" alt="Hipodoge">
-                </label>
-
-                <input type="radio" name="mascota" id="capipepo">
-                <label class="tarjeta-de-mokepon" for="capipepo">
-                    <p>Capipepo</p>
-                    <img src="./assets/mokepons_mokepon_capipepo_attack.png" alt="Capipepo">
-                </label>
-
-                <input type="radio" name="mascota" id="ratigueya">
-                <label class="tarjeta-de-mokepon" for="ratigueya">
-                    <p>Ratigueya</p>
-                    <img src="./assets/mokepons_mokepon_ratigueya_attack.png" alt="Ratigueya">
-                </label>
+            <div id="contenedorTarjetas" class="tarjetas">
             </div>
-
-            <!-- <label for="langostelvis">Langostelvis</label>
-            <input type="radio" name="mascota" id="langostelvis"> -->
-
-            <!-- Hipodoge -> Agua
-            Capipepo -> Tierra
-            Ratigueya -> Fuego
-            Langostelvis -> Agua y Fuego
-            Tucapalma -> Agua y Tierra
-            Pydos -> Tierra y Fuego -->
 
             <button id="boton-mascota" class="button-seleccionar">seleccionar</button>
         </section>
@@ -55,10 +26,7 @@
 
             <h2 class="subtitulo">Elije tu ataque :</h2>
 
-            <div class="botones-ataques">
-                <button id="boton-fuego" class="boton-ataque">Fuego 🔥</button>
-                <button id="boton-agua" class="boton-ataque">Agua 💧</button>
-                <button id="boton-tierra" class="boton-ataque">Tierra 🌱</button>
+            <div id="contenedorAtaques" class="botones-ataques" >
             </div>
 
             <div>
@@ -86,5 +54,6 @@
             </div>
         </section>
     </section>
+    <script src="./js/mokepon.js"></script>
 </body>
 </html>
