@@ -154,6 +154,14 @@ input:checked + label{
     letter-spacing: 2px;
 }
 
+#ver-mapa{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#mapa {
+    border: 2px solid white;
+}
 @media (max-width: 600px){
     body{
         align-items: flex-start;
